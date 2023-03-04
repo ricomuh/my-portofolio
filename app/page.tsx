@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Rico Muhammad",
+  description: "Web and Game Developer",
+};
+
 export default function Home() {
   return (
     <div>

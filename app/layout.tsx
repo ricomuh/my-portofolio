@@ -1,8 +1,15 @@
 import "./globals.css";
+import Navbar from "@/components/navbar";
+import Header from "./header";
+import Body from "./body";
 
 export const metadata = {
-  title: "Rico Muhammad",
+  title: {
+    default: "Rico Muhammad",
+    template: "%s | Rico Muhammad",
+  },
   description: "Web and Game Developer",
+  authors: { name: "Rico Muhammad" },
 };
 
 export default function RootLayout({
@@ -12,7 +19,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <Body>
+        <Header>
+          {/* @ts-expect-error */}
+          <Navbar />
+        </Header>
+        {children}
+      </Body>
     </html>
   );
 }
