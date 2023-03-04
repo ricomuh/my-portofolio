@@ -9,7 +9,13 @@ export const metadata = {
     template: "%s | Rico Muhammad",
   },
   description: "Web and Game Developer",
-  authors: { name: "Rico Muhammad" },
+  creator: "Rico Muhammad",
+  keywords: [
+    "Rico Muhammad",
+    "Web Developer",
+    "Game Developer",
+    "Leolit Games",
+  ],
 };
 
 export default function RootLayout({
