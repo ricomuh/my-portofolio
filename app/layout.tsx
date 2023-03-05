@@ -1,8 +1,12 @@
 import "./globals.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 import Navbar from "@/components/navbar";
 import Header from "./header";
 import Body from "./body";
 import Footer from "@/components/footer";
+
+config.autoAddCss = false;
 
 export const metadata = {
   title: {
@@ -31,7 +35,7 @@ export default function RootLayout({
           {/* @ts-expect-error */}
           <Navbar />
         </Header>
-        <main>{children}</main>
+        {children}
         <Footer />
       </Body>
     </html>
